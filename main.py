@@ -31,7 +31,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Enter your Assistant ID here.
-ASSISTANT_ID = "asst_VHUsedert1fAmMqSubO31QRf"
+ASSISTANT_ID = "asst_identification"
 
 
 # Create a thread with a message.

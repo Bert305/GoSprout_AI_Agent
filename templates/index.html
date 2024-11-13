@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+</head>
+<body>
+    <h1>Chatbot Interface</h1>
+    <div>
+        <label for="userMessage">Your Message:</label>
+        <input type="text" id="userMessage" placeholder="Enter your message here">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div>
+        <h2>Response:</h2>
+        <p id="response">Waiting for a response...</p>
+    </div>
+
+    <script>
+        async function getChatbotResponse(userMessage) {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chatbot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userMessage })
+                });
+                
+                const data = await response.json();
+                return data.response;
+            } catch (error) {
+                console.error("Error:", error);
+                return "Error connecting to chatbot";
+            }
+        }
+
+        async function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            document.getElementById('response').textContent = "Processing...";
+            
+            const chatbotResponse = await getChatbotResponse(userMessage);
+            document.getElementById('response').textContent = chatbotResponse;
+        }
+    </script>
+</body>
+</html>

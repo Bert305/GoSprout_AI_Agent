@@ -18,3 +18,5 @@ pythonProcess.stderr.on('data', (data) => {
 pythonProcess.on('close', (code) => {
   console.log(`Python process exited with code ${code}`);
 });
+
+// Handle process exit
