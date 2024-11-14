@@ -44,7 +44,7 @@ def chatbot():
 
 @app.route('/chatbot')
 def home():
-    return render_template('index.html')
+    return render_template('index.html') # Render the HTML file: choose index.html or index2.html
 
 if __name__ == '__main__':
     app.run(debug=True)

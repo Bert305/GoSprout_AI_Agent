@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <style>
+        /* Style for the modal container */
+        #chatModal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        /* Open state of the modal */
+        #chatModal.open {
+            display: block;
+            opacity: 1; /* Fade in */
+            transform: translate(-50%, -50%) scale(1); /* Pop effect */
+        }
+
+        /* Dark background overlay */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #overlay.visible {
+            display: block;
+        }
+
+        /* Close button */
+        .close-btn {
+            float: right;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="openChat()">Open Chat</button>
+
+    <!-- Modal Structure -->
+    <div id="overlay"></div>
+    <div id="chatModal">
+        <button class="close-btn" onclick="closeChat()">X</button>
+        <h1>Chatbot</h1>
+        <div>
+            <label for="userMessage">Your Message:</label>
+            <input type="text" id="userMessage" placeholder="Enter your message here">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div>
+            <h2>Response:</h2>
+            <p id="response">Waiting for a response...</p>
+        </div>
+    </div>
+
+    <script>
+        // Open the modal
+        function openChat() {
+            const modal = document.getElementById('chatModal');
+            const overlay = document.getElementById('overlay');
+            modal.classList.add('open');
+            overlay.classList.add('visible');
+        }
+
+        // Close the modal
+        function closeChat() {
+            const modal = document.getElementById('chatModal');
+            const overlay = document.getElementById('overlay');
+            modal.classList.remove('open');
+            overlay.classList.remove('visible');
+        }
+
+        // Function to fetch chatbot response
+        async function getChatbotResponse(userMessage) {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chatbot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userMessage })
+                });
+
+                const data = await response.json();
+                return data.response;
+            } catch (error) {
+                console.error("Error:", error);
+                return "Error connecting to chatbot";
+            }
+        }
+
+        // Function to send a message
+        async function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            document.getElementById('response').textContent = "Processing...";
+            
+            const chatbotResponse = await getChatbotResponse(userMessage);
+            document.getElementById('response').textContent = chatbotResponse;
+        }
+    </script>
+</body>
+</html>
