@@ -29,7 +29,7 @@ Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥�
 <p></p>
 <p>Create .env file in the root of the project folder</p>
 <p></p>
-<p>Inside .env file use environment variable OPENAI_API_KEY=Your_API_Key</p>
+<p>Inside .env file use environment variable OPENAI_API_KEY=Your_API_Key && ASSISTANT_ID=Your_Assistant_ID</p>
 <p></p>
 <p>Run python app.py in the terminal to start server</p>
 <p></p>
