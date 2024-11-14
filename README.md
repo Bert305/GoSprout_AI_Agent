@@ -1,5 +1,6 @@
 # GoSprout_AI_Agent
 Create a project for GoSprout to access OpenAI
+![image](https://github.com/user-attachments/assets/2a3b539d-e5b0-4f07-aabd-7f18e4200e14)
 
 Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥🔥
 <p></p>
@@ -54,6 +55,7 @@ Integrate Python into Node.js file to access OpenAI 🔥🔥🔥
 <p>node runOpenAI.js</p>
 <p></p>
 <p>Should see openAI response in the terminal! Can just run main.py file as well to do the same thing! 😎</p>
+<h7>Research on React.js component for project here: <a href="https://docs.google.com/document/d/15D7xWDa68y6lrX7Q2apizzNW2mDzHEwOqSkzOMEwktc/edit?usp=sharing">LINK</a></h7>
 
 
 
