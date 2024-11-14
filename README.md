@@ -55,7 +55,7 @@ Integrate Python into Node.js file to access OpenAI 🔥🔥🔥
 <p>node runOpenAI.js</p>
 <p></p>
 <p>Should see openAI response in the terminal! Can just run main.py file as well to do the same thing! 😎</p>
-<h7>Research on React.js component for project here: <a href="https://docs.google.com/document/d/15D7xWDa68y6lrX7Q2apizzNW2mDzHEwOqSkzOMEwktc/edit?usp=sharing">LINK</a></h7>
+<h7>Research on React.js component for project here: <a href="https://docs.google.com/document/d/15D7xWDa68y6lrX7Q2apizzNW2mDzHEwOqSkzOMEwktc/edit?usp=sharing" target=”_blank”>LINK</a></h7>
 
 
 
