@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+        }
+
+        img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #F28626;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FFC527;
+        }
+
+        #response {
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add your logo here -->
+        <img src="https://media.licdn.com/dms/image/v2/D560BAQFfcYS3lvq8ig/company-logo_200_200/company-logo_200_200/0/1655997034219?e=2147483647&v=beta&t=oVoKCkVoAnmWW99egr6i0oLSqE3CmSZ_AnznvWfBEuU" alt="Logo">
+        <h1>AI Agent Interface</h1>
+        <div>
+            <input type="text" id="userMessage" placeholder="Enter your message here">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div>
+            <h2>Response:</h2>
+            <p id="response">Waiting for a response...</p>
+        </div>
+    </div>
+
+    <script>
+        async function getChatbotResponse(userMessage) {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chatbot', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: userMessage })
+                });
+                
+                const data = await response.json();
+                return data.response;
+            } catch (error) {
+                console.error("Error:", error);
+                return "Error connecting to chatbot";
+            }
+        }
+
+        async function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            document.getElementById('response').textContent = "Processing...";
+            
+            const chatbotResponse = await getChatbotResponse(userMessage);
+            document.getElementById('response').textContent = chatbotResponse;
+        }
+    </script>
+</body>
+</html>
