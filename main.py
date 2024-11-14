@@ -26,12 +26,13 @@ load_dotenv()
 
 # Now you can access the environment variable
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+ASSISTANT_ID = os.getenv('assistant_id')
 
 # Use the environment variable in your script
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Enter your Assistant ID here.
-ASSISTANT_ID = "asst_identification"
+assistant_id = ASSISTANT_ID
 
 
 # Create a thread with a message.

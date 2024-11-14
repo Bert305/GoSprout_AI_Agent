@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-
+ASSISTANT_ID = os.getenv('assistant_id')
 # Initialize OpenAI client
 client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -18,7 +18,7 @@ CORS(app)  # Enable CORS for the entire Flask app
 def chatbot():
     data = request.json
     user_message = data.get("message", "")
-    assistant_id = "asst_identification"
+    assistant_id = ASSISTANT_ID
 
     # Create a thread with the user's message
     thread = client.beta.threads.create(
@@ -42,7 +42,7 @@ def chatbot():
 
     return jsonify({"response": latest_message})
 
-@app.route('/')
+@app.route('/chatbot')
 def home():
     return render_template('index.html')
 
