@@ -40,7 +40,9 @@ Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥�
 
 or
 
-Use <strong>create_open_ai-assistant.py</strong> file to create OpenAI Assistants on the fly without using the Graphical User Interface <strong>&&</strong> can use the <strong>access_open_ai_terminal.py</strong> file to utilize and access your OpenAI Assistant locally inside your IDE by running the file in the terminal 🔥🔥🔥
+Use <strong>runOpenAI.js</strong> file to access the <strong>main.py</strong> file so you can utilize and access your OpenAI Assistant locally inside your IDE by running the file in the terminal: node runOpenAI
+<p></p>
+You can also just use main.py to do the same thing locally on your machine.
 <p></p>
 <p><strong>Recommend you install the Python and Python libraries mentioned above before you get started‼️</strong></p>
 <p></p>
