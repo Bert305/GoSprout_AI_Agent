@@ -40,17 +40,12 @@ Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥�
 
 or
 
-Use <strong>runOpenAI.js</strong> file to access the <strong>main.py</strong> file so you can utilize and access your OpenAI Assistant locally inside your IDE by running the file in the terminal: node runOpenAI
 <p></p>
-You can also just use main.py to do the same thing locally on your machine.
+You can also just use <strong>main.py</strong> file so you can utilize and access your OpenAI Assistant locally on your machine inside your IDE by running the file in the terminal: python main.py
 <p></p>
 <p><strong>Recommend you install the Python and Python libraries mentioned above before you get started‼️</strong></p>
 <p></p>
-<p><strong>Instructions</strong></p>
-<p></p>
-<p></p>
-<p></p>
-<p>Should see openAI response in the terminal! Can just run main.py file as well to do the same thing! 😎</p>
-<h7>Research on React.js component for project here: <a href="https://docs.google.com/document/d/15D7xWDa68y6lrX7Q2apizzNW2mDzHEwOqSkzOMEwktc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">LINK</a></h7>
+<p>I also have a node js file called <strong></strong>runOpenAI.js</strong> that utilizes the main.py file as well. I was doing a side project to see if you can integrate Python into Node.js</p>
+<p>Just go into the terminal and type: node runOpenAI.js</p>
 
 
