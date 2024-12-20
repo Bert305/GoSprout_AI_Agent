@@ -19,8 +19,6 @@ Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥�
 <p></p>
 <p>Recommend creating a project folder first (can right-click and create a folder inside your desktop) to clone your GitHub repo into. Make sure to create the .venv inside the project folder first (VScode will create one for you once you start installing the Python libraries in the terminal assuming you downloaded Python already), then continue installing the other Python libraries once the .venv is created</p>
 <p>Next is to CD inside the Github repo project and get started</p>
-</br>
-<p><strong>The goal is to avoid pushing the .venv Python libraries into the project.</strong></p>
 <p></p>
 <p></p>
 </br>
