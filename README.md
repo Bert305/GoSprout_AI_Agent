@@ -17,7 +17,7 @@ Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥�
 
 <p><strong>Note:</strong> Once you start adding the Python Libraries mentioned below you will be asked to install the libraries on your IDE (VScode) instead of globally to avoid conflicts. Please say allow and pick a version to create a .venv for your Python Libraries</p>
 <p></p>
-<p>Recommend creating a project folder first (can right-click and create a folder inside your desktop) to clone your GitHub repo into. Make sure to create the .venv inside the project folder first (VScode will create one for you once you start installing the Python libraries in the terminal assuming you downloaded Python already), then continue installing the other Python libraries once the .venv is created</p>
+
 <p>Next is to CD inside the Github repo project and get started</p>
 <p></p>
 <p></p>
