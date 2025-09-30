@@ -1,60 +1,58 @@
 # GoSprout_AI_Agent
-Create a project for GoSprout to access OpenAI
-![image](https://github.com/user-attachments/assets/2a3b539d-e5b0-4f07-aabd-7f18e4200e14)
 
-Use Flask API server and HTML browser to connect and access openAI 🔥🔥🔥🔥
-<p></p>
-<p><strong>Download Instructions and Prerequisites</strong></p>
-<p></p>
-<p>Download Python</p>
-<p></p>
-<p>Need API Key</p>
-<p></p>
-<p>Need OpenAI Account and create an Assistant</p>
-<p></p>
-<p>Will need the ID of the Assistant</p>
-<p></p>
+Easily connect to OpenAI using a Flask API server and a browser-based interface.
 
-<p><strong>Note:</strong> Once you start adding the Python Libraries mentioned below you will be asked to install the libraries on your IDE (VScode) instead of globally to avoid conflicts. Please say allow and pick a version to create a .venv for your Python Libraries</p>
-<p></p>
+![GoSprout_AI_Agent Screenshot](https://github.com/user-attachments/assets/2a3b539d-e5b0-4f07-aabd-7f18e4200e14)
 
-<p>Next is to CD inside the Github repo project and get started</p>
-<p></p>
-<p></p>
-</br>
-<p><strong>Python libraries you need to install inside your terminal</strong></p>
-<p></p>
-<p>pip install beautifulsoup4 requests pandas</p>
-<p></p>
-<p>pip install openai --upgrade</p>
-<p></p>
-<p>pip install python-dotenv</p>
-<p></p>
-<p>pip install flask-cors</p>
-<p></p>
-<p><strong>Instructions to set up environment and start server</strong></p>
-<p></p>
-<p>Run python environment.py to create .gitignore file</p>
-<p></p>
-<p>Create .env file in the root of the project folder</p>
-<p></p>
-<p>Inside .env file use environment variables:
-<p>OPENAI_API_KEY=Your_API_Key</p>
-<p>ASSISTANT_ID=Your_Assistant_ID</p></p>
-<p>Run python app.py in the terminal to start server</p>
-<p></p>
-<p>copy paste in the browser http://127.0.0.1:5000/chatbot to use OpenAI</p>
-<p></p>
-<p>Get started!!😎 </p>
+## Prerequisites
 
-or
+- **Python** (Download from [python.org](https://www.python.org/downloads/))
+- **OpenAI Account** ([Sign up here](https://platform.openai.com/signup))
+- **OpenAI API Key** and **Assistant ID**
 
-<p></p>
-You can also just use <strong>main.py</strong> file so you can utilize and access your OpenAI Assistant locally on your machine inside your IDE by running the file in the terminal: python main.py
-<p></p>
-<p><strong>Recommend you install the Python and Python libraries mentioned above before you get started‼️</strong></p>
-<p></p>
-<p>I also have a node js file called <strong></strong>runOpenAI.js</strong> that utilizes the main.py file as well. I was doing a side project to see if you can integrate Python into Node.js</p>
-<p>Just go into the terminal and type: node runOpenAI.js</p>
+## Setup Instructions
+
+1. **Clone this repository** and open it in your IDE (e.g., VS Code).
+2. When prompted, create a `.venv` (virtual environment) for Python libraries to avoid global conflicts.
+3. **Install required libraries** in your terminal:
+    ```bash
+    pip install beautifulsoup4 requests pandas
+    pip install openai --upgrade
+    pip install python-dotenv
+    pip install flask-cors
+    ```
+4. **Create a `.env` file** in the project root with:
+    ```
+    OPENAI_API_KEY=Your_API_Key
+    ASSISTANT_ID=Your_Assistant_ID
+    ```
+5. **Generate a `.gitignore` file**:
+    ```bash
+    python environment.py
+    ```
+6. **Start the Flask server**:
+    ```bash
+    python app.py
+    ```
+7. **Access the chatbot** in your browser at [http://127.0.0.1:5000/chatbot](http://127.0.0.1:5000/chatbot)
+
+## Alternative: Run Locally in IDE
+
+You can also use `main.py` to interact with your OpenAI Assistant directly:
+```bash
+python main.py
+```
+
+## Node.js Integration
+
+A sample Node.js file, `runOpenAI.js`, demonstrates Python integration:
+```bash
+node runOpenAI.js
+```
+
+---
+
+**Tip:** Install Python and all required libraries before starting!  
+Get started and explore OpenAI with GoSprout_AI_Agent! 😎
 
 
